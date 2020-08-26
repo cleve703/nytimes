@@ -114,8 +114,8 @@
     position: absolute;
     width: 0;
     height: 0;
-    left: 6.9px;
-    top: 20.75px;
+    left: 6.8px;
+    top: 20.55px;
     border: 2.8px solid;
     border-color: #fff transparent transparent #fff;
   }
@@ -140,6 +140,7 @@
   .submenu_item {
     order: 4;
     padding: 0px 10px;
+    align-self: center;
   }
   .item {
     order: 3;
@@ -269,6 +270,25 @@
     grid-area: 2 / 1 / 2 / 5;
     color:#666;
   }
+  .circle-background{
+    background: #eceaea;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+  }
+  .facebook-icon {
+    margin-top: 5px;
+  }
+  .twitter-icon {
+    margin-top: 7px;
+  }
+  .email-icon {
+    margin-top: 7px;
+  }
+  .share-icon {
+    margin-top: 5px;
+  }
+  
 
   /* Desktop menu */
   @media all and (min-width: 400px) {
