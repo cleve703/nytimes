@@ -1,0 +1,214 @@
+
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin-block: 0;
+  }
+  body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @font-face {
+    font-family:"nyt-cheltenham";
+    src:url(https://a1.nyt.com/fonts/family/cheltenham/cheltenham-italic-700.ttf);
+    font-style:normal;
+    font-weight:700;
+  }
+  @font-face {
+    font-family:"nyt-imperial";
+    src:url(https://a1.nyt.com/fonts/family/imperial/imperial-normal-500.ttf);
+    font-style:normal;
+    font-weight:700;
+  }
+  @font-face {
+    font-family:"nyt-franklin";
+    src:url(https://a1.nyt.com/fonts/family/franklin/franklin-normal-700.ttf);
+    font-style:normal;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family:"nyt-franklin";
+    src:url(https://a1.nyt.com/fonts/family/franklin/franklin-normal-500.ttf);
+    font-style:normal;
+    font-weight: 500;
+  }
+  .article {
+    display: grid;
+    grid-template-columns: 10% 20% 1fr 20% 10%;
+    grid-template-rows: auto;
+    flex-flow: wrap;
+    grid-template-areas: 
+      "x_left left_aside primary right_aside x_right"
+  }
+  .category {
+    font-family: nyt-franklin,helvetica,arial,sans-serif;
+    font-weight: 700;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  .mini-headline {
+    font-family: "nyt-cheltenham-small";
+    font-size: 13px;
+    font-weight: 400;
+  }
+  h1 {
+    padding: 30px 0px 0px 0px;
+    text-align: start;
+    font-family: "nyt-cheltenham";
+    font-style: italic;
+    font-size:2.5rem;
+  }
+  h3 {
+    padding: 10px 0 0 0;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+  }
+  nav {
+    background: white;
+    padding: 0 15px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    }
+  a {
+    text-decoration: none;
+  }
+  .speech_bubble {
+    position: relative;
+    width: 25px;
+    height: 23px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #fff;
+    border: 1px solid black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .speech_bubble:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 6px;
+    top: 22px;
+    border: 3px solid;
+    border-color: black transparent transparent black;
+  }
+  .speech_bubble:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 6.9px;
+    top: 20.75px;
+    border: 2.8px solid;
+    border-color: #fff transparent transparent #fff;
+}
+  .menu {
+    position:top;
+    list-style-type: none;
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .submenu {
+    position:top;
+    list-style-type: none;
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .submenu_item {
+    order: 4;
+    padding: 0px 10px;
+  }
+  .item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .logo {
+    margin-top: 6px;
+    height: 23px;
+    width: 169px;
+  }
+  byline {
+    padding: 50px 0 10px 0;
+    font-family: nyt-franklin;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    padding-bottom: 20px;
+  }
+  dateline {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    grid-column: primary;
+    color: #666;
+  }
+  .active .item {
+    display: block;
+  }
+  p {
+    padding: 10px 0px 0px 0px;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+  }
+
+  div {
+    grid-column-start: left_aside;
+    grid-column-end: right_aside;
+  }
+  p, credit, h1, h2, h3, iframe, byline {
+    grid-column-start: primary
+  }
+  img {
+    width: 100%;
+  }
+  figcaption {
+    font-family: nyt-imperial;
+    font-style:normal;
+    font-size:0.9375rem;
+    color:#666;
+    grid-column-start: primary;
+    grid-column-end: primary;
+  }
+  credit {
+    padding: 0px 0px 0px 3px; 
+    color: #888;
+  }
+  .secondary_image_div {
+    width: 70%;
+    justify-self: center;
+  }
+    .main_img, iframe {
+    padding: 20px 0 0 0;
+  }
+
+  /* Desktop menu */
+  @media all and (min-width: 400px) {
+    .menu {
+        align-items: center;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+        padding: 10px
+    }
+}
