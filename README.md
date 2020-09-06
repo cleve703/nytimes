@@ -1,0 +1,1 @@
+Project to recreate an article from the New York Times website, as an exercise in HTML/CSS skills. Part of the full stack developer curriculum at [The Odin Project](http://theOdinProject.org).
